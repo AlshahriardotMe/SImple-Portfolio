@@ -23,7 +23,7 @@ def about(request):
 
 
 def work_detail(request, slug):
-    work = get_object_or_404(Work, slug=slug)
+    work = get_object_or_404(work )
     testimonies = Testimony.objects.all()
     context = {
         'work': work,

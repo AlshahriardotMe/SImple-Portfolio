@@ -11,16 +11,16 @@
          <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
             <div id="filters" class="filters">
                <a href="#" data-filter="*" class="active">All</a>
-               {% for Category in Categories %}
+               {% for category in categories %}
                <a href="#" data-filter=".{{ category.engname }}">{{ category.rusname }}</a>
                {% endfor %}
             </div>
          </div>
       </div>
       <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
-         {% for Work in Works %}
+         {% for work in works %}
          <div class="item {{ work.category.engname }} col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="{% url 'work_detail' slug=work.slug %}" class="item-wrap fancybox">
+            <a href="{% url 'work_detail'%}" class="item-wrap fancybox">
                <div class="work-info">
                   <h3>{{ work.title }}</h3>
                   <span>{{ work.category }}</span>
@@ -41,7 +41,7 @@
          </div>
       </div>
       <div class="row">
-         {% for Service in Services %}
+         {% for service in services %}
          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
             <i class='{{ service.icon }}'></i>
             <h5 class="mb-2">{{ service.name }}</h5>
@@ -60,7 +60,7 @@
    <div class="container">
       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
          <div class="swiper-wrapper">
-            {% for Testimony in Testimonies %}
+            {% for testimony in testimonies %}
             <div class="swiper-slide">
                <div class="testimonial-wrap">
                   <div class="testimonial">
